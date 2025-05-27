@@ -12,10 +12,11 @@ workflows:
     scripts:
       - name: Set up local properties
         script: echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
-      - name: Build Android app
-        script: |
-          cd $CM_BUILD_DIR
-          ./gradlew assembleRelease
+      - n- name: Build Android app
+  script: |
+    cd $CM_BUILD_DIR
+    chmod +x ./gradlew
+    ./gradlew assembleRelease
     artifacts:
       - app/build/outputs/apk/release/app-release.apk
     publishing:
