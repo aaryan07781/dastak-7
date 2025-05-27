@@ -1,0 +1,2 @@
+rootProject.name = "DastakMobile7"
+include ':app'
